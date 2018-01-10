@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Open+Sans:300,400,600,700&subset=cyrillic');
+
 /************** DEFAULT **************/
 * {
-    font-family: '', sans-serif;
+    font-family: 'Open Sans', sans-serif,
+                 'Fira Sans Extra Condensed', sans-serif;
+    font-stretch: condensed;
     font-weight: 400;
     font-size: 15px;
     box-sizing: border-box;
@@ -108,7 +112,7 @@ nav a:hover {
 
 .left-section p,
 .right-section p {
-    max-width: 340px;
+    max-width: 350px;
     margin-bottom: 55px;
 }
 
@@ -163,7 +167,7 @@ button:active {
 }
 
 .right-section input {
-    width: 347px;
+    width: 330px;
     border: 1px solid #c0c8ca;
     border-radius: 7px;
     padding: 15px;
@@ -283,7 +287,7 @@ h2 {
     counter-increment: list;
     content: counter(list);
     position: absolute;
-    top: -30px;
+    top: -55px;
     left: 150px;
     z-index: -1;
     border: none;
