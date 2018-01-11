@@ -1,0 +1,44 @@
+.s1, .s2, .s3, .s4, .s5 {
+	position: relative;
+	background: url('../images/sprites.png') no-repeat;
+	display: inline-flex;
+	margin: 20px 7px;
+	transition: .4s;
+}
+
+.s1:hover, .s2:hover, .s3:hover, .s4:hover, .s5:hover {
+	transform: scale(1.2);
+}
+
+.s1{
+	background-position: -113px -10px ;
+	width: 25px;
+	height: 25px;
+	top: 3px;
+}
+
+.s2{
+	background-position: -62px -59px ;
+	width: 24px;
+	height: 28px;
+}
+
+.s3{
+	background-position: -12px -59px ;
+	width: 25px;
+	height: 29px;
+}
+
+.s4{
+	background-position: -54px -10px ;
+	width: 43px;
+	height: 24px;
+	top: 3px;
+}
+
+.s5{
+	background-position: -14px -10px ;
+	width: 25px;
+	height: 29px;
+}
+
