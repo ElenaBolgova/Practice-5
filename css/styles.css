@@ -1,3 +1,5 @@
+/************** FONTS **************/
+
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Open+Sans:300,400,600,700&subset=cyrillic');
 
 /************** DEFAULT **************/
@@ -18,6 +20,7 @@
     position: relative;
     display: block;
     width: 100%;
+    min-height: 100vh;
     min-width: 320px;
     overflow: hidden;
 }
@@ -40,12 +43,23 @@ a {
 /************** HEADER **************/
 
 header {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 5px 5px 0 rgba(103, 150, 46, .2);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+header .wrapper-inner {
     display: flex;
     justify-content: space-between;
 }
 
 .logo {
     margin: 15px 0;
+    max-height: 51px;
     cursor: pointer;
     transition: .4s;
 }
@@ -55,7 +69,6 @@ header {
 }
 
 nav {
-    width: 600px;
     margin: 35px 0;
 }
 
@@ -65,10 +78,13 @@ nav ul {
 }
 
 nav a {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     position: relative;
     padding: 10px 12px 10px 19px;
     font-size: 20px;
     transition: .4s;
+    margin: 0 auto;
+    left: 5px;
 }
 
 nav li a:focus:before {
@@ -99,21 +115,74 @@ nav li a:focus:after {
 
 nav a:hover {
     color: #568619;
+    left: -5px;
 }
+
+/************** BURGER **************/
+
+.burger {
+    display: none;
+}
+/*
+@media (max-width: 740px) {
+
+    .burger {
+        display: block;
+        position: fixed;
+        top: 23px;
+        right: 23px;
+        color: #67962e;
+        font-size: 45px;
+        z-index: 102;
+    }
+
+    nav {
+        min-height: calc(100vh - 520px);
+    }
+
+    .menu {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        padding: 25px 0 0;
+        z-index: 101;
+        background: #fff;
+        left: -100px;
+        height: calc(100vh - 520px);
+        transition: .6s;
+    }
+
+    .menu li {
+        display: block;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+}*/
 
 /************** MAIN **************/
 
-.section {
+.top-section-inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 0 60px 0;
+    margin-bottom: 60px;
 }
 
-.left-section p,
-.right-section p {
+.left-section p {
+    font-family: 'Open Sans', sans-serif;
     max-width: 350px;
-    margin-bottom: 55px;
+}
+
+.sprite {
+    display: inline-flex;
+
+}
+
+.right-section p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 70px;
 }
 
 .right-section {
@@ -133,7 +202,7 @@ nav a:hover {
 
 h1 {
     text-align: center;
-    margin: 40px 0;
+    margin: 130px 0 40px 0;
 }
 
 h1 span {
@@ -142,6 +211,8 @@ h1 span {
 }
 
 h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     margin-bottom: 15px;
     font-size: 20px;
 }
@@ -152,6 +223,8 @@ h2 {
 }
 
 button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 17px;
     padding: 15px 39px;
     border-radius: 7px;
@@ -162,15 +235,15 @@ button {
 }
 
 button:active {
-    transform: translateY(3px);
     filter: contrast(130%);
+    transform: translateY(2px);
 }
 
 .right-section input {
     width: 330px;
     border: 1px solid #c0c8ca;
     border-radius: 7px;
-    padding: 15px;
+    padding: 16px;
     transition: .4s;
 }
 
@@ -182,7 +255,7 @@ button:active {
 .blue-button {
     background: url('../images/blue-button.png') no-repeat;
     background-size: cover;
-    margin-top: 15px;
+    /*margin-top: 15px; Перенести в медиазапрос*/
 }
 
 .blue-button:hover {
@@ -227,17 +300,112 @@ p a {
 p a:hover {
     text-decoration: none;
 }
+
+/************** MODAL **************/
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 101;
+}
+
+.modal-inner {
+    position: relative;
+    width: 990px;
+    padding: 0 50px 40px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #bebebe;
+    transition: .4s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+    color: #000;
+    cursor: pointer;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 23px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+h3:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #bebebe;
+    bottom: -25px;
+    left: 0;
+}
+
+h3 span {
+    font-size: 23px;
+    color: #2a87cd;
+    border: none;
+}
+
+.form input {
+    margin: 0 15px 20px 0;
+    padding: 15px 20px;
+    width: 330px;
+    border: 1px solid #bebebe;
+    border-radius: 7px;
+    transition: .4s;
+}
+
+.form input:focus {
+    border: none;
+    outline: none;
+}
+
+.form input:focus {
+    border: 1px solid #c0c8ca;
+    box-shadow: 0 0 10px 0 rgba(86, 134, 25, .5);
+}
+
+.form input:hover {
+    box-shadow: 0 0 10px 0 rgba(86, 134, 25, .7);
+}
+
+.form input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+button[type="submit"]:focus {
+    border: none;
+    outline: none;
+}
+
 /************** SECTION 2 **************/
 
-.section:nth-child(2) ul {
+.section-2 ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     padding: 0 15px;
+    margin-bottom: 60px;
 }
 
-.section:nth-child(2) li {
+.section-2 li {
     align-self: baseline;
     text-align: center;
 }
@@ -248,7 +416,7 @@ h2 {
 
 /************** SECTION 3 **************/
 
-.section:nth-child(3) ul {
+.section-3 ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -260,7 +428,7 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
 }
 
 .details {
@@ -275,7 +443,7 @@ h2 {
     align-self: flex-start;
 }
 
-.section:nth-child(3) h2 {
+.section-3 h2 {
     color: #0f78bf;
 }
 
@@ -284,6 +452,8 @@ h2 {
 }
 
 .counter li::before {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     counter-increment: list;
     content: counter(list);
     position: absolute;
@@ -293,7 +463,6 @@ h2 {
     border: none;
     text-align: center;
     font-size: 157px;
-    font-weight: bold;
     color: #e2e2e2;
 }
 
@@ -335,11 +504,12 @@ footer .wrapper-inner {
 }
 
 .fa {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    line-height: 30px;
+    line-height: 32px;
     text-align: center;
+    vertical-align: middle;
     margin: 2px;
     transition: .4s;
 }
@@ -375,7 +545,7 @@ footer .wrapper-inner {
 }
 
 .fa-telegram {
-    font-size: 31px;
+    font-size: 32px;
     color: #259bd9;
     background: #fff 50% 50%;
 }
