@@ -35,54 +35,75 @@
         <div class="top-section">
             <h1><span>VPN</span></h1>
             <div class="top-section-inner">
-                <div class="left-section">
+                <div class="top-left-section">
                     <h2>Интернет переходит<br>
                         на новый уровень</h2>
                     <p>Максимальная защита передаваемых данных.<br>
                         Сохранение инкогнито при работе в сети.<br>
                         Снятие географических лимитов.</p>
                     <ul class="sprite">
-                        <li><a href="#"><span class="s1"></span></a></li>
-                        <li><a href="#"><span class="s2"></span></a></li>
-                        <li><a href="#"><span class="s3"></span></a></li>
-                        <li><a href="#"><span class="s4"></span></a></li>
-                        <li><a href="#"><span class="s5"></span></a></li>
+                        <li><span class="s1"></span></li>
+                        <li><span class="s2"></span></li>
+                        <li><span class="s3"></span></li>
+                        <li><span class="s4"></span></li>
+                        <li><span class="s5"></span></li>
                     </ul><br>
                     <button class="green-button">Попробовать бесплатно</button>
                     <button class="blue-button get-modal">Купить</button>
+
                     <div class="modal"><!--Модальное окно-->
+
                         <div class="modal-inner">
+
                             <div class="close-modal">&#10006;</div>
+
                             <form action="#" class="form">
+
                                 <h3><span>Оформление заказа VPN </span>на 1 год</h3>
-                                <label><input type="email" placeholder="Введите ваш e-mail" name="email" id="email-area" required>
-                                </label>
-                                <label><input type="text" placeholder="Подписки" name="subscribe" id="subscribe-area" required>
-                                </label>
-                                <div class="custom-count">
-                                    <!--<input type="text">-->
-                                </div>
-                                <div class="custom-check">
-                                    <!--<input type="text">-->
-                                </div>
-                                <div class="modal-help">?</div><!--baloon-->
-                                <form>
-                                    <label><input type="text" placeholder="Ваш promo-код" name="promo-code" id="promo-code-area" required>
+
+                                <div class="line">
+                                    <label><input type="email" placeholder="Введите ваш e-mail" name="email" id="email-area" required>
                                     </label>
-                                    <button type="submit" class="blue-button">Применить</button>
-                                </form>
-                                <div>
-                                    Ваша скидка:<span>25%</span>
-                                    Сумма к оплате:<span>15 777 руб.</span>
+                                    <div class="subscribe">Подписки
+                                        <div class="custom-counter">
+                                            <div class="counter-plus"></div>
+                                            <div class="counter-value"></div>
+                                            <div class="counter-minus"></div>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-check">
+                                        <label><input type="checkbox" name="check-order-ip" id="check-order-ip" checked>
+                                            <i class="fa fa-check" aria-hidden="true"></i>Арендовать личный IP</label>
+                                    </div>
+                                    <div class="modal-help" data-balloon-length="medium" data-balloon="Здесь будет идти какое-то описание, небольшой текст на несколько строк" data-balloon-pos="down-right">?</div>
                                 </div>
-                                <button type="submit" class="green-button">Купить</button>
+
+                                <div class="line line-bottom">
+                                    <form>
+                                        <label><input type="text" placeholder="Ваш promo-код" name="promo-code" id="promo-code-area" required>
+                                        </label>
+                                        <button type="submit" class="blue-button">Применить</button>
+                                    </form>
+
+                                    <div class="summary-order">
+                                        <span>Ваша скидка:</span><span class="discount"> 25%</span><br>
+                                        <span>Сумма к оплате:</span><span class="amount-paid"> 15 777 руб.</span>
+                                    </div>
+
+                                    <button type="submit" class="green-button buy">Купить</button>
+                                </div>
+
                             </form>
+
                         </div>
-            </div>
+
+                    </div>
+
                 </div>
 
-                <div class="right-section">
-                    <div class="right-section-inner">
+                <div class="top-right-section">
+                    <div class="top-right-section-inner">
                         <h2>Уже есть код доступа?<br>
                             Подключайтесь!</h2>
                         <p>Введите код доступа и подключите ваше<br>мобильное устройство, компьютер<br>или получите настройки для вашего роутера.</p>
@@ -200,7 +221,7 @@
                         <li class="link"><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li class="link"><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li class="link"><a href="#"><i class="fa fa-vk"></i></a></li>
-                        <li class="link"><a href="#"><i class="fa fa-telegram"></i></a></li>
+                        <li class="link"><a href="#"><i class="fa fa-paper-plane"></i></a></li>
                         <li class="link"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     </ul>
                 </li>
