@@ -16,16 +16,6 @@ $(window).ready(function() {
         }
     });
 
-    ///// CUSTOM CHECK /////
-    /*Глюк при нажатии на текст справа от CHECKBOX - галочка ставится и сразу пропадает,
-    вне текста в этом же блоке галочка ведет себя как нужно*/
-
-    $('.custom-check').click(function() {
-        var hiddenCheck = $('.fa-check');
-        $(hiddenCheck).fadeOut(100);
-        hiddenCheck.show();
-    });
-
     ///// BURGER /////
 
     /* ВАРИНТ1 (как делали на занятии)
