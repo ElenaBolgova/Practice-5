@@ -45,7 +45,7 @@ a {
 header {
     position: fixed;
     background: #fff;
-    /*box-shadow: 0 5px 5px 0 rgba(103, 150, 46, .2);*/
+    box-shadow: 0 5px 5px 0 rgba(103, 150, 46, .2);
     top: 0;
     left: 0;
     right: 0;
@@ -157,6 +157,46 @@ nav a:hover {
 .sprite {
     display: inline-flex;
     margin: 10px 0;
+}
+
+.s1, .s2, .s3, .s4, .s5 {
+    position: relative;
+    background: url('../images/sprites.png') no-repeat;
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 5px 15px 12px 0;
+}
+
+.s1{
+    background-position: -113px -10px ;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+}
+
+.s2{
+    background-position: -62px -59px ;
+    width: 24px;
+    height: 28px;
+}
+
+.s3{
+    background-position: -12px -59px ;
+    width: 25px;
+    height: 29px;
+}
+
+.s4{
+    background-position: -54px -10px ;
+    width: 43px;
+    height: 24px;
+    top: 3px;
+}
+
+.s5{
+    background-position: -14px -10px ;
+    width: 25px;
+    height: 29px;
 }
 
 .top-right-section p {
@@ -724,7 +764,6 @@ footer .wrapper-inner {
 .fa-facebook:hover {
     color: #00599f;
     background: #fff;
-    transform: scale(1.1);
 }
 
 .fa-twitter {
@@ -734,7 +773,6 @@ footer .wrapper-inner {
 .fa-twitter:hover {
     color: #00aff5;
     background: #fff;
-    transform: scale(1.1);
 }
 
 .fa-vk {
@@ -744,7 +782,6 @@ footer .wrapper-inner {
 .fa-vk:hover {
     color: #00668f;
     background: #fff;
-    transform: scale(1.1);
 }
 
 .fa-paper-plane {
@@ -755,7 +792,6 @@ footer .wrapper-inner {
 .fa-paper-plane:hover {
     color: #259bd9;
     background: #fff;
-    transform: scale(1.1);
 }
 
 .fa-google-plus {
@@ -765,7 +801,6 @@ footer .wrapper-inner {
 .fa-google-plus:hover {
     color: #ff2900;
     background: #fff;
-    transform: scale(1.1);
 }
 
 footer li {
@@ -956,6 +991,10 @@ address {
         flex: 0 0 33%;
     }
 
+    .modal {
+        align-items: flex-start;
+    }
+
     .summary-order {
         flex: 0 0 55%;
     }
@@ -985,16 +1024,31 @@ address {
         right: 0;
     }
 
-    .menu {
+    nav li a:hover:after,
+    nav li a:hover:before {
         display: none;
-        position: relative;
+    }
+
+    nav a,
+    nav a:hover {
+        left: 0;
+    }
+
+    .menu {
+        display: block;
         width: 100%;
-        min-width: 320px;
-        padding: 25px 0;
-        height: 100vh;
-        z-index: 101;
+        height: calc(100vh - 81px);
+        position: fixed;
+        left: 0;
+        bottom: -150%;
         background: #fff;
+        z-index: 101;
+        padding: 25px 0;
         transition: .6s;
+    }
+
+    .menu.active {
+        bottom: 0;
     }
 
     .menu li {
@@ -1003,9 +1057,7 @@ address {
         text-align: center;
     }
 
-    .menu.active {
-        bottom: 0;
-    }
+
 
 }
 
@@ -1067,12 +1119,9 @@ address {
         margin-top: 10px;
     }
 
-    .modal-inner h3 {
-        padding: 0 10px;
-    }
-
     .close-modal {
-        right: 5px;
+        top: 0;
+        right: 0;
     }
 
 }
@@ -1101,10 +1150,15 @@ address {
     .footer-right li:nth-child(4),
     .footer-right li:nth-child(5) {
         flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .footer-left {
+        text-align: center;
     }
 
     .modal-inner {
-        padding: 5px 20px;
+        padding: 10px 15px;
     }
 
 }

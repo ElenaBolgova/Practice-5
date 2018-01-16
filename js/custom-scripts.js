@@ -18,25 +18,15 @@ $(window).ready(function() {
 
     ///// BURGER /////
 
-    /* ВАРИНТ1 (как делали на занятии)
-     При нажатии на бургер - меню не пропадает */
-
-    /*$('.burger').click(function() {
-        $(this).toggleClass('fa-close fa-bars');
-        $('.menu').toggleClass('active');
-    });*/
-
-    /* ВАРИАНТ2*/
-
     $('.burger').click(function() {
         $(this).toggleClass('fa-close fa-bars');
-        $('.menu').fadeToggle(100);
+        $('.menu').toggleClass('active');
     });
 
     ///// CUSTOM COUNTER /////
 
     var defaultCounterValue = 1;
-    $('.counter-value').text(defaultCounterValue); /*default value for counter*/
+    $('.counter-value').text(defaultCounterValue);
     $('.custom-counter input').val(defaultCounterValue);
 
     $('.counter-plus').click(function() {
