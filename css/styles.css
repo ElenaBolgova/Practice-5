@@ -482,6 +482,7 @@ h3:after {
     border-right: 6px solid transparent;
     border-top: 8px solid #8aa646;
     margin: auto;
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -508,6 +509,7 @@ h3:after {
     border-right: 6px solid transparent;
     border-bottom: 8px solid #8aa646;
     margin: auto;
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -1021,6 +1023,10 @@ address {
 
     .modal {
         align-items: flex-start;
+    }
+
+    .modal-inner {
+        top: 80px;
     }
 
     .line-bottom {
