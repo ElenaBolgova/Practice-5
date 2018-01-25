@@ -1083,8 +1083,8 @@ address {
         width: 100%;
         height: calc(100vh - 81px);
         position: fixed;
-        left: 0;
-        bottom: -150%;
+        top: 81px;
+        right: -150%;
         background: #fff;
         z-index: 101;
         padding: 25px 0;
@@ -1092,7 +1092,7 @@ address {
     }
 
     .menu.active {
-        bottom: 0;
+        right: 0;
     }
 
     .menu li {

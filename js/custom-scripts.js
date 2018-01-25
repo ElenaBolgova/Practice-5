@@ -23,6 +23,10 @@ $(window).ready(function() {
         $('.menu').toggleClass('active');
     });
 
+    while($('.menu').hasClass('active')) {
+        $('.wrapper').css('height', '100%');
+    }
+
     ///// CUSTOM COUNTER /////
 
     var defaultCounterValue = 1;
