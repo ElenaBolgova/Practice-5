@@ -27,6 +27,13 @@ $(window).ready(function() {
         $('.wrapper').css('height', '100%');
     }
 
+    $('nav ul').click(function() {
+        if ($(window).width() < 740) {
+            $('.menu').removeClass('active');
+            $('.burger').toggleClass('fa-close fa-bars');
+        }
+    });
+
     ///// CUSTOM COUNTER /////
 
     var defaultCounterValue = 1;
